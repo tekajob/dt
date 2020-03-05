@@ -101,7 +101,7 @@ jobs:
       - run:
           command: |
             echo "Starting deploy" ${CIRCLE_BRANCH}
-      - heroku/deploy-via-git:
+      - heroku/deploy-via-git
       - run:
           command: |
             echo "Finished deploying" ${CIRCLE_BRANCH}
