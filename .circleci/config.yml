@@ -100,11 +100,11 @@ jobs:
       - heroku/install
       - run:
           command: |
-            echo "Starting deploy" ${CIRCLE_BRANCH}
+            echo "Starting deploy" ${CIRCLE_SHA1}
       - heroku/deploy-via-git
       - run:
           command: |
-            echo "Finished deploying" ${CIRCLE_BRANCH}
+            echo "Finished deploying" ${CIRCLE_SHA1}
             echo "Revision check etc."
 
 workflows:
